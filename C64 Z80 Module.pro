@@ -1,4 +1,4 @@
-update=01/07/2019 20:05:49
+update=02/07/2019 01:49:59
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=
@@ -63,3 +61,6 @@ LibName31=contrib
 LibName32=valves
 LibName33=C64-Exp-Port
 LibName34=C:/Program Files/KiCad/share/kicad/library/Zilog
+LibName35=74ls367_ab_fix
+[general]
+version=1
