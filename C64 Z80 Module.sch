@@ -59,8 +59,6 @@ F 3 "DOCUMENTATION" H 2350 625 50  0001 C CNN
 	1    2350 2175
 	1    0    0    -1  
 $EndComp
-Text Label 3125 1325 0    60   ~ 0
-~RES
 Text Label 3125 1525 0    60   ~ 0
 CLK
 Text Label 3125 3125 0    60   ~ 0
@@ -125,8 +123,6 @@ Text Label 1575 1725 2    60   ~ 0
 ~IO1
 Text Label 1575 2225 2    60   ~ 0
 BA
-Text Label 1575 2325 2    60   ~ 0
-~DMA
 Text Label 1575 3125 2    60   ~ 0
 C64_D0
 Text Label 1575 3025 2    60   ~ 0
@@ -146,8 +142,6 @@ C64_D7
 Entry Wire Line
 	3500 1525 3600 1625
 Entry Wire Line
-	3500 1325 3600 1425
-Entry Wire Line
 	1100 1425 1200 1525
 Entry Wire Line
 	1100 1525 1200 1625
@@ -155,8 +149,6 @@ Entry Wire Line
 	1100 1625 1200 1725
 Entry Wire Line
 	1100 2125 1200 2225
-Entry Wire Line
-	1100 2225 1200 2325
 NoConn ~ 1600 1425
 NoConn ~ 1600 1825
 NoConn ~ 1600 1925
@@ -577,7 +569,7 @@ F 3 "" H 5275 5875 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 3650 4975 1    60   Input ~ 0
-A_DIR
+A_OUT
 Text Label 5225 5350 0    60   ~ 0
 Z80_A15
 Text Label 5225 5450 0    60   ~ 0
@@ -746,8 +738,6 @@ Text GLabel 8725 6625 2    60   Output ~ 0
 ~Z80_WR
 Text GLabel 4850 3050 0    60   Input ~ 0
 ~Z80_RD
-Text Label 8675 4825 0    60   ~ 0
-~RES
 NoConn ~ 8650 6125
 NoConn ~ 8650 5925
 NoConn ~ 8650 5825
@@ -765,7 +755,7 @@ $EndComp
 Text Label 9550 1950 0    60   ~ 0
 R/~W
 Text GLabel 8050 2250 0    60   Input ~ 0
-A_DIR
+A_OUT
 NoConn ~ 9525 1850
 Text Label 8100 1750 2    60   ~ 0
 CLK
@@ -807,8 +797,6 @@ Wire Wire Line
 Wire Wire Line
 	3100 1525 3500 1525
 Wire Wire Line
-	3100 1325 3500 1325
-Wire Wire Line
 	1200 1625 1600 1625
 Wire Wire Line
 	1200 1525 1600 1525
@@ -816,10 +804,8 @@ Wire Wire Line
 	1200 1725 1600 1725
 Wire Wire Line
 	1200 2225 1600 2225
-Wire Wire Line
-	1200 2325 1600 2325
 Wire Bus Line
-	1100 725  1100 2225
+	1100 725  1100 2125
 Wire Bus Line
 	1100 725  3600 725 
 Wire Bus Line
@@ -894,7 +880,7 @@ Wire Bus Line
 Wire Bus Line
 	4350 650  4350 2650
 Wire Bus Line
-	1025 650  12525 650 
+	1025 650  12675 650 
 Wire Wire Line
 	6250 750  6650 750 
 Wire Wire Line
@@ -1136,8 +1122,6 @@ Wire Wire Line
 Wire Wire Line
 	8650 6625 8725 6625
 Wire Wire Line
-	8650 4825 9050 4825
-Wire Wire Line
 	9525 1950 9925 1950
 Wire Wire Line
 	7625 2150 8125 2150
@@ -1164,7 +1148,7 @@ Wire Bus Line
 Wire Bus Line
 	7625 825  10025 825 
 Wire Bus Line
-	10025 825  10025 3700
+	10025 825  10025 2050
 $Comp
 L 74LS04 U2
 U 1 1 5D1B3F5A
@@ -1366,40 +1350,32 @@ $EndComp
 $Comp
 L 74LS74 U5
 U 2 1 5D1BEFF6
-P 13250 1925
-F 0 "U5" H 13400 2225 50  0000 C CNN
-F 1 "74LS74" H 13550 1630 50  0000 C CNN
-F 2 "" H 13250 1925 50  0001 C CNN
-F 3 "" H 13250 1925 50  0001 C CNN
-	2    13250 1925
+P 13250 1850
+F 0 "U5" H 13400 2150 50  0000 C CNN
+F 1 "74LS74" H 13550 1555 50  0000 C CNN
+F 2 "" H 13250 1850 50  0001 C CNN
+F 3 "" H 13250 1850 50  0001 C CNN
+	2    13250 1850
 	1    0    0    1   
 $EndComp
 $Comp
 L VCC #PWR014
 U 1 1 5D1BFC03
-P 13250 1375
-F 0 "#PWR014" H 13250 1225 50  0001 C CNN
-F 1 "VCC" H 13250 1525 50  0000 C CNN
-F 2 "" H 13250 1375 50  0001 C CNN
-F 3 "" H 13250 1375 50  0001 C CNN
-	1    13250 1375
+P 13250 1300
+F 0 "#PWR014" H 13250 1150 50  0001 C CNN
+F 1 "VCC" H 13250 1450 50  0000 C CNN
+F 2 "" H 13250 1300 50  0001 C CNN
+F 3 "" H 13250 1300 50  0001 C CNN
+	1    13250 1300
 	1    0    0    -1  
 $EndComp
-NoConn ~ 13850 2125
+NoConn ~ 13850 2050
 Wire Wire Line
-	12500 1850 12575 1850
-Wire Wire Line
-	12575 1850 12575 1925
-Wire Wire Line
-	12575 1925 12650 1925
-Wire Wire Line
-	12425 2125 12650 2125
-Text Label 12425 775  3    60   ~ 0
+	12500 1850 12650 1850
+Text Label 12575 775  3    60   ~ 0
 C64_D0
 Entry Wire Line
-	12525 650  12425 750 
-Wire Wire Line
-	12425 750  12425 2125
+	12675 650  12575 750 
 Wire Wire Line
 	12575 3250 12500 3250
 Wire Wire Line
@@ -1422,9 +1398,7 @@ Wire Wire Line
 	13850 3300 14150 3300
 Connection ~ 13925 3650
 Wire Wire Line
-	10125 3800 12650 3800
-Wire Wire Line
-	13850 1725 14300 1725
+	13850 1650 14300 1650
 Connection ~ 13925 3300
 Wire Wire Line
 	13850 3000 14300 3000
@@ -1524,7 +1498,7 @@ Wire Wire Line
 Wire Wire Line
 	9750 2625 9750 4575
 Text GLabel 12200 3475 0    60   Output ~ 0
-A_DIR
+A_OUT
 Wire Wire Line
 	12575 3475 12200 3475
 Connection ~ 12575 3250
@@ -1550,10 +1524,6 @@ Wire Wire Line
 	8725 5125 8650 5125
 Text GLabel 11025 4775 2    60   Input ~ 0
 ~Z80_CLK
-Text Label 10150 3800 0    60   ~ 0
-~DMA
-Entry Wire Line
-	10025 3700 10125 3800
 Text Notes 9625 2050 0    60   ~ 0
 ?
 Text Label 8675 7125 0    60   ~ 0
@@ -1585,11 +1555,10 @@ Text GLabel 10625 7225 2    60   Input ~ 0
 ~Z80_WAIT
 Wire Wire Line
 	10625 7225 10550 7225
-Text GLabel 14300 1725 2    60   Output ~ 0
+Text GLabel 14300 1650 2    60   Output ~ 0
 ~Z80_WAIT
 Wire Wire Line
-	14150 3300 14150 1725
-Connection ~ 14150 1725
+	14150 3300 14150 1650
 $Comp
 L GND #PWR017
 U 1 1 5D1E2DA6
@@ -1751,16 +1720,6 @@ NoConn ~ 14100 9150
 NoConn ~ 14100 9550
 NoConn ~ 15300 9150
 NoConn ~ 15300 9350
-Entry Wire Line
-	10025 3550 10125 3650
-Wire Wire Line
-	10125 3650 11275 3650
-Wire Wire Line
-	11275 3650 11275 2475
-Wire Wire Line
-	11275 2475 13250 2475
-Text Label 10150 3650 0    60   ~ 0
-~RES
 NoConn ~ 13525 8700
 $Comp
 L 74LS373 U4
@@ -1784,4 +1743,103 @@ Wire Wire Line
 	4150 3250 7050 3250
 Wire Wire Line
 	7050 3250 7050 2700
+Text GLabel 8725 4825 2    60   Input ~ 0
+~RESET
+Wire Wire Line
+	8725 4825 8650 4825
+Text GLabel 3100 1325 2    60   Output ~ 0
+~RESET
+Text GLabel 13175 2475 0    60   Input ~ 0
+~RESET
+Wire Wire Line
+	13250 2400 13250 2475
+Wire Wire Line
+	13250 2475 13175 2475
+Connection ~ 14150 1650
+Wire Wire Line
+	12650 2050 12575 2050
+Wire Wire Line
+	12575 2050 12575 750 
+Text GLabel 1450 2300 0    60   Input ~ 0
+~DMA
+Wire Wire Line
+	1600 2325 1525 2325
+Wire Wire Line
+	1525 2325 1525 2300
+Wire Wire Line
+	1525 2300 1450 2300
+Text GLabel 12575 3800 0    60   Output ~ 0
+~DMA
+Wire Wire Line
+	12575 3800 12650 3800
+Wire Notes Line
+	2425 4950 1950 4950
+Wire Notes Line
+	1950 4925 1950 4975
+Wire Notes Line
+	1950 4925 1975 4925
+Wire Notes Line
+	1975 4925 1975 4900
+Wire Notes Line
+	1975 4900 2000 4900
+Wire Notes Line
+	2000 4900 2000 4875
+Wire Notes Line
+	2000 4875 2025 4875
+Wire Notes Line
+	2025 4875 2025 4850
+Wire Notes Line
+	2025 4850 2050 4850
+Wire Notes Line
+	2050 4850 2050 5050
+Wire Notes Line
+	1950 4975 1975 4975
+Wire Notes Line
+	1975 4975 1975 5000
+Wire Notes Line
+	1975 5000 2000 5000
+Wire Notes Line
+	2000 5000 2000 5025
+Wire Notes Line
+	2000 5025 2025 5025
+Wire Notes Line
+	2025 5025 2025 5050
+Wire Notes Line
+	2025 5050 2050 5050
+Wire Notes Line
+	2425 6250 1950 6250
+Wire Notes Line
+	1950 6225 1950 6275
+Wire Notes Line
+	1950 6225 1975 6225
+Wire Notes Line
+	1975 6225 1975 6200
+Wire Notes Line
+	1975 6200 2000 6200
+Wire Notes Line
+	2000 6200 2000 6175
+Wire Notes Line
+	2000 6175 2025 6175
+Wire Notes Line
+	2025 6175 2025 6150
+Wire Notes Line
+	2025 6150 2050 6150
+Wire Notes Line
+	2050 6150 2050 6350
+Wire Notes Line
+	1950 6275 1975 6275
+Wire Notes Line
+	1975 6275 1975 6300
+Wire Notes Line
+	1975 6300 2000 6300
+Wire Notes Line
+	2000 6300 2000 6325
+Wire Notes Line
+	2000 6325 2025 6325
+Wire Notes Line
+	2025 6325 2025 6350
+Wire Notes Line
+	2025 6350 2050 6350
+Text Notes 4000 4825 0    60   ~ 0
+Add $1000 to address
 $EndSCHEMATC
