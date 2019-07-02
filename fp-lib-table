@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name C64-Exp-Port)(type KiCad)(uri $KIPRJMOD/C64-Exp-Port.pretty)(options "")(descr ""))
+)
