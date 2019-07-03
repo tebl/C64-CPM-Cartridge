@@ -1,4 +1,4 @@
-update=02/07/2019 01:49:59
+update=03/07/2019 12:59:18
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,5 +62,15 @@ LibName32=valves
 LibName33=C64-Exp-Port
 LibName34=C:/Program Files/KiCad/share/kicad/library/Zilog
 LibName35=74ls367_ab_fix
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=export
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [general]
 version=1
